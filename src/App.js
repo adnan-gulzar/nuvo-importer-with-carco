@@ -1,12 +1,12 @@
-import './App.css';
-import { NuvoImporter } from 'nuvo-react';
-import { targetDataModel } from './utils';
+import "./App.css";
+import { NuvoImporter } from "nuvo-react";
+import { targetDataModel } from "./utils";
 
 function App() {
   return (
     <div className="App">
       <NuvoImporter
-        licenseKey="LLdW6luF0XAOcpwXYJ7mYT/HP53RbF7WY1OV6NTYpFo="
+        licenseKey="non-commercial"
         settings={{
           developerMode: true,
           identifier: "product_data",
@@ -25,37 +25,37 @@ function App() {
               storage_temperature: {
                 info: [
                   {
-                    level: 'warning',
-                    message: 'onEntryInit',
+                    level: "warning",
+                    message: "onEntryInit",
                   },
                 ],
               },
               vendor_name: {
-                value: 'test',
+                value: "test",
                 info: [
                   {
-                    level: 'info',
-                    message: 'onEntryInit',
+                    level: "info",
+                    message: "onEntryInit",
                   },
                 ],
               },
               deposit: {
                 info: [
                   {
-                    level: 'warning',
-                    message: 'onEntryInit',
+                    level: "warning",
+                    message: "onEntryInit",
                   },
                 ],
-                value: 'test',
+                value: "test",
               },
               calorific_value: {
                 info: [
                   {
-                    level: 'error',
-                    message: 'onEntryInit',
+                    level: "error",
+                    message: "onEntryInit",
                   },
                 ],
-                value: 'test kcal',
+                value: "test kcal",
               },
             });
           });
@@ -64,9 +64,11 @@ function App() {
         onCancel={() => {
           console.log("onCancel");
         }}
-      // onEntryInit={onEntryInit}
-      // columnHooks={columnHooks}
-      >Test</NuvoImporter>
+        // onEntryInit={onEntryInit}
+        // columnHooks={columnHooks}
+      >
+        Test
+      </NuvoImporter>
     </div>
   );
 }
